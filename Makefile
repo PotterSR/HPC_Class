@@ -6,5 +6,8 @@ LDFLAGS = -lm -fopenmp
 laplace: laplace.cpp
 	$(CXX) $(CXXFLAGS) -o laplace laplace.cpp $(LDFLAGS)
 
+neumann: neuman .cpp
+	$(CXX) $(CXXFLAGS) -o laplace laplace.cpp $(LDFLAGS)
+
 clean:
 	rm -f laplace
