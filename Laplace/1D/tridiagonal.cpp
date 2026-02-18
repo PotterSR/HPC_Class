@@ -18,6 +18,8 @@ int main(int argc, char* argv[]){
     double T2 = stod(argv[3]);
     //Inicializar la matriz con todos ceros
 
+    double L = 1.0; // Longitud del dominio
+    double dx = L/(N-1); // Tamaño del paso
 
     vector<double> boundary_conditions(2, 0.0);
     vector<double> rr(N, -1.0);        
@@ -63,7 +65,7 @@ int main(int argc, char* argv[]){
 
     //Imprimir los resultados
     for(int i = 0; i < N; i++){
-        cout << i << " " << rr[i] << endl;
+        cout << i*dx << " " << rr[i] << endl;
     }
 
     return 0;
